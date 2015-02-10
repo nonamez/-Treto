@@ -42,18 +42,6 @@ function generateImageList(images) {
 	jQuery('#img-upload-button-upload').button('reset');
 }
 
-function showProcessModal() {
-	jQuery('#processing-modal').modal({
-		'backdrop': 'static',
-		'keyboard': false,
-		'show': true
-	});
-}
-
-function hideProcessModal() {
-	
-}
-
 // Based on http://blog.vjeux.com/2012/image/image-layout-algorithm-google-plus.html
 
 function getHeight(images, width) {
@@ -76,10 +64,6 @@ function setHeight(images, height) {
 			height: height
 		});		
 	}
-}
-
-function resize(images, width) {
-	setHeight(setHeight, getHeight(images, width));
 }
 
 function arrange() {
