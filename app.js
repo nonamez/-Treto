@@ -72,11 +72,9 @@ function setHeight(images, height) {
 	
 	for (var i = 0; i < images.length; ++i) {
 		jQuery(images[i]).css({
-			width: height * jQuery(images[i]).data('width') / jQuery(images[i]).data('height'), 
+			width: height * jQuery(images[i]).width() / jQuery(images[i]).height(), 
 			height: height
-		});
-		
-		jQuery(images[i]).attr('src', jQuery(images[i]).attr('src').replace(/w[0-9]+-h[0-9]+/, 'w' + jQuery(images[i]).width() + '-h' + jQuery(images[i]).height()));
+		});		
 	}
 }
 
